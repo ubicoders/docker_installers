@@ -1,3 +1,4 @@
+# docker install
 sudo apt update
 sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
@@ -7,10 +8,16 @@ apt-cache policy docker-ce
 sudo apt install docker-ce -y
 sudo systemctl status docker
 
+# docker without sudo
 sudo usermod -aG docker ${USER}
-VERSION="2.3.3"
+newgrp docker
 
+# docker compsoe
+VERSION="2.35.1"
 mkdir -p ~/.docker/cli-plugins/
 curl -SL "https://github.com/docker/compose/releases/download/v${VERSION}/docker-compose-linux-x86_64" -o ~/.docker/cli-plugins/docker-compose
 chmod +x ~/.docker/cli-plugins/docker-compose
 docker compose version
+
+
+
