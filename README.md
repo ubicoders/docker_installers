@@ -1,18 +1,54 @@
 # Ubicoders' Quick Docker Installers
 🚀 This installation files are created for fresh Ubuntu distributions from 16 to 22. 🚀
 
-## Step 1. 🍓Find out your ubuntu distribution version
+# For Unbuntu 18, 20, 22, 24+
+
+## Step 1. 🍓Simple 1-line command to install docker
+
+```bash
+bash dockerinstaller.bash
+```
+
+To veryfy if "docker" command is recognized by the terminal,
+
+```bash
+docker ps
+```
+
+if permission issue,
+
+```bash
+sudo docker ps
+```
+
+## Step 2 🍪Restart
+
+Log-out and log-in Ubuntu. Or. simply restart the computer.
+
+
+That's it happy coding!
+
+___
+___
+___
+___
+___
+___
+
+# For Ubuntu 16
+
+### Step 1. 🍓Make sure the Ubuntu version is 16.04
 
 ```bash
 lsb_release -a
 ```
 
-## Step 2. 🍉Run on the the dockerInsall for the corresponding Ubuntu version.
+### Step 2. 🍉Run on dockerInstall_old_u16.bash
 
 For instance,
 
 ```bash
-bash dockerInstall_u22.sh
+bash dockerInstall_old_u16.bash
 ```
 
 ## Step 2.1 🍩Veryfy 
